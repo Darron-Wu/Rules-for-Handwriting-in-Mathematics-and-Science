@@ -1,2 +1,2 @@
 # Rules-for-Writing-of-Maths
-How to write in Maths
+A simple .tex on how to write in Maths.
