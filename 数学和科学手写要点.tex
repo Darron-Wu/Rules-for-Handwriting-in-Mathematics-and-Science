@@ -1,0 +1,314 @@
+%\documentclass[11pt, UTF8]{ctexart}
+\documentclass[11pt, a4paper, titlepage]{article}
+
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath, amssymb}
+\usepackage{mathrsfs} %提供数学环境的一种字体，书法式斜体大写字母
+\usepackage{esint} %在数学环境里提供\varoiint（闭合曲面积分号，或带圈的双重积分号）
+\usepackage{cancel} %在数学环境里画对角斜线表示约去
+\usepackage{enumitem} %修改emumerate的序号样式
+\usepackage[hmargin=1.25in,vmargin=1in]{geometry} %default setting in "Word"
+\usepackage{booktabs} %三线表
+\usepackage{threeparttable} %三线表尾注；表后注
+
+\newcommand{\diff}{\,\mathrm{d}} %微分号
+\newcommand{\Newton}{\mathrm{N}} %单位：牛顿
+
+\begin{document}
+
+\title{数学和科学手写要点\\
+\centering
+{\Large Rules for Handwriting in Mathematics and Science\footnote{本文的标准主要是针对A4纸设定的，实际应用时，应根据纸张大小适当调整。}}}
+\author{邬大容(Darron Wu)}
+\date{2018/5/29}
+\maketitle
+
+\begin{enumerate}\setcounter{enumi}{-1}
+\item 写任何非文字部分时必须全程用力，禁止潦草。清楚就是好看。Clarity is beauty.
+
+\part{Notation}
+\item 数字，字母和算符要如印刷一般标准整齐，空格要清晰，即使没有横线也要底部对齐    \footnote{字符的大小应以“书写感觉最自然”为宜。}。\\
+    数字：
+    {\fontsize{14pt}{1} $\mathtt{1234567890}$}\footnote{注意：1不能向右翘脚，易与小写el混淆。2和0容易写得太小。}\\
+    手写：\\[7pt]
+    小写字母：
+    {\fontsize{14pt}{1} $\mathtt{abcdefghijklmnopqrstuvwxyz}$}\footnote{我的i, l, q, z的写法有手写体的习惯。m的第二个门有变矮的倾向。t先写勾再写横。}\\
+    手写：\\[7pt]
+    大写字母：
+    {\fontsize{14pt}{1}
+    $\mathtt{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$}\footnote{A 为两笔。 C 的弧度要够，避免与``$\:(\:$''混淆。D的半圆必须与竖接合，不能让竖的两头突出。I有三笔。L的横要水平，保证长度。M和N都为一笔，要写端正。U有脚。Z的转折要尖锐，避免与``$\:2\:$''混淆。}\\
+    手写：\\[7pt]
+    简洁/艺术手写体大写字母：\\
+    {\fontsize{14pt}{1}$\mathcal{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$}\\
+    {\fontsize{14pt}{1}$\mathscr{ABCDEFGHIJKLMNOPQRSTUVWXYZ}$}\\
+    手写：\\[7pt]
+    部分希腊字母\footnote{See http://www.foundalis.com/lan/hw/grkhandw.htm for more information on handwritten letters in Greek.}：
+    {\fontsize{14pt}{1}
+    $\alpha \beta \gamma \delta \varepsilon \zeta \eta \theta \kappa \lambda \mu \nu \xi \pi \rho \sigma \tau \varphi \chi \psi \omega \: \Gamma \Delta \Theta \Lambda \Sigma \Phi \Psi \Omega$}
+    \footnote{$\alpha$ 的圈大小要适中，太大易与a 混淆，太小易与2混淆。$\gamma$ 的交点偏下。$\lambda$ 的左脚只有右脚的一半高。$\nu$ 的起笔要有弯折。$\pi$ 手写时脚是竖直的。$\sigma$ 的横要平，长度为圆的一个半径。$\tau$ 为一笔连写。$\chi$用类似X的写法。$\phi$ 和$\psi$ 的竖要倾斜，$\psi$的起笔无弯折。$\Phi$ 和$\Psi$ 的竖要竖直。$\Omega$ 脚短，头圆，要写得慢一点。}\\
+    手写：\\[7pt]
+    字母表示的算符\footnote{虽然在\LaTeX 中数学变量是斜体，算符是正体，但在手写特别是计算中，变量出现得比算符要多得多，所以变量用正体。那么，此类算符应该用斜体，特别是容易与变量混淆时。但应尽量使用约定的记号替代字母算符，如用$\nabla$替代$\mathrm{grad}$.}：
+    {\fontsize{13pt}{1}
+    $\log\: \ln\; \sin\; \arcsin\; \det\; \dim\; \lim\; \sup\; \max\; \mathrm{sgn}$\\}
+    手写：\\[7pt]
+    逻辑与集合：
+    {\fontsize{13pt}{1}
+    $\forall \; \exists \; \Rightarrow \iff \varnothing \subset \; \supset \; \subseteq \; \supseteq \; \in \; \notin \;$} $\bigcap \; \bigcup$\\%空集一般用\varnothing 而不用\emptyset（\emptyset 太瘦了）。交并集用\bigcap和\bigcup 而不用\cap和\cup（它们太小了）
+    手写：\\[7pt]
+    几何：
+    {\fontsize{10pt}{1}
+    $\odot\,O \quad \triangle ABC\!\sim\!\triangle DEF \quad \cong \quad AB\!\perp CD\!\quad \angle\alpha$} \quad $\vec{a}\parallel\vec{b} \quad \vec{a}\,\cdot\,\vec{b}$ \quad {\fontsize{10pt}{1} $\overrightarrow{AB}$}\\
+    手写：\\[7pt]
+    微积分\footnote{手写中不区分$\diff$与$d$.}：
+    \begin{displaymath}
+        x \mapsto f(x) \qquad \diff z = A\Delta x + B\Delta y \qquad
+        \nabla f(x, y, z) = \frac{\partial f}{\partial x}\vec{i} + \frac{\partial f}{\partial y}\vec{j} + \frac{\partial f}{\partial z}\vec{k}
+    \end{displaymath}
+    \begin{displaymath}
+        f(x) = f(x_{0}) + f'(x_{0})(x - x_{0}) + \frac{f''(x_{0})}{2!}(x - x_{0})^{2} + \cdots + \frac{f^{n}(x_{0})}{n!}(x - x_{0})^{n} + o[(x - x_{0})^{n}]
+    \end{displaymath}
+    手写：\\[60pt]
+    巨算符和定界符\footnote{定界符中，本条展示单竖线，绝对值符号和小括号。大括号见第\ref{brace}条，中括号见第\ref{bracket}条。}：
+    \begin{displaymath}
+        \left. \frac{\partial f}{\partial t} \right|_{t=0} \quad
+        \int_0^{\pi} x f(\sin x) \diff x = \frac{\pi}{2} \int_0^{\pi} f(\sin x) \diff x \quad
+        \lim_{n \to \infty}\bigg\arrowvert \frac{a_{n+1}}{a_{n}} \bigg\arrowvert = \rho
+    \end{displaymath}
+    \begin{displaymath}
+        \iiint\limits_\Omega \left(\frac{\partial P}{\partial x} + \frac{\partial Q}{\partial y} + \frac{\partial R}{\partial z} \right) \diff v = \varoiint\limits_\Sigma P\diff y \diff z + Q\diff z \diff x + R\diff x \diff y \quad %\limits写在巨算符的上下标前可以让它们显示在巨算符的上下方（求和号式），\nolimits则会让它们显示在右上角和右下角（积分式）
+        \sum_{n=0}^\infty \frac{1}{n!} x^{n} = e^{x}
+    \end{displaymath}
+    手写：\\[60pt]
+
+\item 把科学计数法中的$\scriptstyle\times10$缩小到普通数字大小的1/2, 这样既方便写指数又可以比较清晰地区分科学计数法和乘法运算符，示例：
+    \begin{displaymath}
+        \frac{4v^{2}R}{G} = \frac{4 \times (3.94{\scriptstyle\times10}^{4})^{2}\mathrm{m}/\mathrm{s} \times 5.96{\scriptstyle\times10}^{9}\mathrm{m}}{6.67{\scriptstyle\times10}^{-11}\mathrm{N}\cdot \mathrm{m}^{2}/\mathrm{kg}^{2}}
+    \end{displaymath}
+
+\item \label{brace}若以$\mathbf{e}$为底的幂的指数部分太大，可以用记号$\exp\left(\langle\text{\emph{expression}}\rangle\right)$. 如：把$\mathbf{e}^{\frac{\ln2}{T_{1/2}}t}$ 记为
+    \begin{displaymath}
+        \exp\biggl( \frac{\ln2}{T_{1/2}}t \biggr)
+    \end{displaymath}
+
+\item 公式中的常数用$\, \mathrm{const}\,$表示\footnote{单用一个字母c容易与变量名混淆。}，如：
+    \begin{displaymath}
+        \int x^{a}\diff x = \frac{1}{a+1} x^{a+1} + \mathrm{const}
+    \end{displaymath}
+
+\item 理论上，下标字符之间的相对大小应与正文相同，但手写时很难做到，而且容易看不清，所以允许写成一样大的。更好的做法是通过合理的记号设置来避免多重下标。
+
+\item 在乘积形式的代数式中，数字在字母前面，字母按英文字母顺序排列，数字和字母放在括号前面，多个括号把简单的放在复杂的前面。
+
+\item 带根号的代数式连根号一起放在数字和字母之后，括号之前。但$\sqrt{2}$等仅含数字的根号放在字母前面，$\pi$\,和\,$\mathrm{e}$\,后面。
+
+\item 数字与字母、字母与字母、数字与括号、字母与括号、括号与括号之间的``×''通常简写成``$\:\cdot\:$''或省略。数字与数字之间的``×''既不能写成``$\:\cdot\:$''，也不能省略。
+
+\item 手写分数线尽量水平。
+
+\item 写分数的顺序：分数线，分子，分母。
+
+\item 当分母只有几（一）个字符而分子非常长时，可以表示为"分母的$-1$次幂"与分子相乘。
+
+\item 分数前只有一个负号``$-$''而无其他符号时，用小括号将其括起，避免遗漏。如\footnote{此处较好的写法是将$T_{2}$写在前面，避免使用本条所述的方法。但是在手写中本条会很实用。}：
+    \begin{displaymath}
+        T(r) = (-)\frac{b(T_{2}-T_{1})(r-a)}{r(b-a)} + T_{2}
+    \end{displaymath}
+
+\item 长分数线和长根号用尺。超过$3\,\mathrm{cm}$算“长”\footnote{约我的七个手写符号宽。多长算“长”的标准是非常个人化的，我把它定义为“徒手基本可以画直的都不算长”。学过画画的人，或者姚明，可能觉得5cm算长，孩子可能觉得1cm算长。}：\rule[2pt]{3cm}{0.6pt}
+
+\item 长根号上方的横线在根号下的内容写完后再划。
+
+\item 使用一个非约定的符号前需要声明，就像在程序里定义变量一样。
+
+\item 同时用到两个用相同字母表示的常数时，可以用加prime($'$)的方式来区分，如：用$k$表示玻尔兹曼常数，而用$k'$表示弹性系数。
+
+\item \label{bracket}将重复出现的因数记为$\,\alpha ,\beta ,\gamma\,$等，示例：
+    \begin{displaymath}
+        \text{记}\ \alpha = {\biggl[ \frac{h}{mc} \left( \frac{1}{\lambda} - \frac{1}{\lambda'} \right) + \frac{E}{mc^{2}}\biggr]}^{2}
+    \end{displaymath}
+
+\item “约去”用一条左上到右下的直线表示，示例：
+    \begin{displaymath}
+        \left( \frac{n}{n_{liq}} - 1 \right) \bcancel{\left( \frac{1}{R_{1}} - \frac{1}{R_{2}} \right)} =
+        \frac{n - n_{liq}}{n_{liq} \bcancel{(n-1)}} \bcancel{(n-1)} \bcancel{\left( \frac{1}{R_{1}} - \frac{1}{R_{2}} \right)}
+    \end{displaymath}
+
+\item “此项为零”用一条从左下到右上的直线表示\footnote{不能在正规考试中用。}，示例：
+    \begin{displaymath}[htbp!]
+        \frac{2}{n\pi}\int_{0}^{\pi} x^{2} \diff \sin(nx) =
+        \frac{2}{n\pi} \left[ \cancel{\left.x^{2}\sin(nx)\right|_{0}^{\pi}} - 2\int_{0}^{\pi} x\sin(nx) \diff x \right]
+    \end{displaymath}
+
+\item 所用题号总是与题目一致。
+
+\item 序号的写法见Table \ref{number}。
+    \begin{table}[h!]
+        \caption{序号的写法}\label{number}
+        \centering
+        \begin{threeparttable}
+            \begin{tabular}{lcc}
+                \toprule
+            类型         &首选                        &次选\tnote{1}                 \\
+                \midrule
+            方程         & ① \qquad ②                  & [1] \qquad\ [2]             \\
+            解法         & Solution 1\qquad Solution 2 & 解法一 \qquad 解法二         \\
+            证法         & Proof 1\qquad Proof 2       & 证法一 \qquad 证法二         \\
+            部分\tnote{2}& Part 1\qquad Part 2         & 第一部分 \qquad 第二部分     \\
+            分类讨论     & Case 1\qquad Case 2         & 情形一 \qquad 情形二         \\
+            次级分类     & Subcase 1\qquad Subcase 2   & 情形一 \qquad 情形二         \\
+            步骤         & Step 1\qquad Step 2         & 步骤一 \qquad\ 步骤二        \\
+            定理\tnote{3}& 与参考材料相同\tnote{4}     & [A]\qquad [B]                \\
+                \bottomrule
+            \end{tabular}
+
+            \begin{tablenotes}
+                \footnotesize
+                \item[1]仅当题中记号与首选重复时，才使用次选。
+                \item[2]用于“等价”命题的证明中。
+                \item[3]泛指，包括定律、公理、推论、重要结果等。
+                \item[4]如果是做书后的练习，一般用书中的序号；没有序号的，用定理的名称；两个都没有的，标明页数和行数。其他材料同理。
+            \end{tablenotes}
+
+        \end{threeparttable}
+    \end{table}
+
+\item 计算中需要引用某个单独成行的等式或表达式的，可以在该式后作$(*)$标记，作为序号引用
+    \footnote{该记号每题至多使用一次，避免混淆。}。
+
+\item 文字与公式混排时，分数要“躺下”，如：在``$\text{\dots according to}\ \rho(x) = \rho_{0}\mathrm{e}^{-x/L}$''中，使用$\mathrm{e}^{-x/L}$而不是$\mathrm{e}^{-\frac{x}{L}}$.\footnote{对于更复杂的以$\mathrm{e}$为底的幂，参见第\ref{brace}条。}\\
+    例外是列举大量分数时，如：“将$\, \phi = 0, \frac{\pi}{4}, \frac{\pi}{2}, \frac{3\pi}{4}, \pi, \frac{5\pi}{4}, \frac{3\pi}{2}, \frac{7\pi}{4}, 2\pi$分别代入⑥, ……”
+
+\item\label{units}物理计算总是带单位。Always add units in physics calculations.
+
+\item “含单位的字母”与“带单位的数字”一起出现在代数式中时，将“带单位的数字”连单位一起括起来，如：The tension as a function of x{\scriptsize(unit: m)} is $F(x) = (392\,\Newton) + (7.70\,\Newton/\mathrm{m})x$.\footnote{\emph{Not} $F(x) = (392 + 7.70x)\Newton$, or, $F(x) = (392\Newton) + (7.70x)\Newton$, etc. 见第\ref{units}条。事实上，应当尽量避免变量与单位混写的情况。}
+
+\item 一个物理量用“不含单位的变量”表示时，将单位前的表达式括起来，如：$v = (40n + 10) \, \mathrm{m/s},\, n = 0,1,2,...$
+
+\item 在省略号之前和之后都加上逗号。Put commas before and after ellipses, such as $(P_{1},\dots, P_{n})$.
+
+\item 当省略号夹在符号之间时，它们同高。具体来说，夹在逗号之间就底部对齐；夹在``$+$''或``$<$''之间就居中。When ellipses are between commas they belong on the same level as the commas; when ellipses are bracketed by symbols such as ``$+$'' or ``$<$'', they should be at mid-level.
+
+
+
+
+\part{Typeset}
+\item Symbols in different formulas must be separated by words.
+    \begin{quote}
+    Bad: Consider $S_{q}$, $q < p$.\\
+    Good: Consider $S_{q}$, where $q < p$.
+    \end{quote}
+
+\item Don't start a sentence with a symbol.
+    \begin{quote}
+    Bad: $x_{n} - a$ has $n$ distinct zeroes.\\
+    Good: The polynomial $x_{n} - a$ has $n$ distinct zeroes.
+    \end{quote}
+
+\item Don't use the symbols $\therefore\, , \ \forall\, , \ \exists, \ \Rightarrow\, , \ \in$, etc.; replace them by the corresponding words\footnote{Except in works on logic, of course.}.
+
+\item Should the first word after a colon be capitalized? Yes, if the phrase following the colon is a full sentence; No, if it is a sentence fragment.
+
+\item 对关于一本书或一门课的草稿纸编号，置于右上角\footnote{有编号的草稿纸不可折叠，并且使用时需要较严格地遵守本规定。对于不编号的草稿纸，本规定仅作参考之用。}。编号规则：
+    \begin{enumerate}[label=(\Roman*)]
+        \item 封面：0。单开一页。
+        \item 第$\, 200n+1$页至第$\, 200n+100$页($n\in \mathrm{N}$)：新开一张纸并编号。
+        \item 其余页：在已编号的纸反面，在原编号上加$100$.
+    \end{enumerate}
+
+\item 默认左边距为零.
+
+\item 默认右边距为2em\footnote{这是为了提醒自己，数学表达式会溢出时，要换行。对单词同样有用。对汉字几乎没有影响。}.
+
+\item “证(Proof)”单独成行\footnote{为了让接下来的内容都可以顶格写，看似浪费，实则节省空间，尤其是在纸张或栏位宽度小时。}，不加标点\footnote{因为单独成行已经起足够清晰了，不再需要通过标点来分割或强调，就好像我们从来不会在行间公式后面加标点一样。}。“解(Solution)”、“讨论(Discussion)”、“评论(Remark)”等同理。
+
+\item 分类讨论部分除与序号相连的段落外，缩进2em.
+
+\item 较大、较长或需要强调的算式要单独成行。\\
+    较大：高度大于汉字高度1.3倍的。\\
+    较长：长度达10em的，或可能中途断行的。\\
+
+\item 单独成行的算式，左边相对文字缩进\footnote{理想的情况是居中，但手写时较难控制，故统一用缩进。}。缩进的大小一般为2em. 当算式长度接近一行时，以第\ref{newline}条为准，不缩进或负缩进也是允许的。
+
+\item 单个分数长度超出一行时，需要通过拆分、缩小字号、化简等方法使其可被完整地写在一行内。
+
+\item \label{newline}应当避免写出需要折行的长公式。如果一定要折行的话，优先在等号之前折行，其次在加号、减号之前，再次在乘号、除号之前。其它位置应当避免折行。示例：
+    \begin{multline*}
+        -\frac{{\hbar}^{2}}{2m} \left( \frac{{\partial}^{2}\psi(x,y,z)}{\partial x^{2}} + \frac{{\partial}^{2}\psi(x,y,z)}{\partial y^{2}}+ + \frac{{\partial}^{2}\psi(x,y,z)}{\partial z^{2}} \right) \\
+        + U(x,y,z)\psi(x,y,z) = E\psi(x,y,z)
+    \end{multline*}
+
+\item 有条件的，应使各算式的等号对齐。
+
+\item 禁止在一行内连等，必须用递等式或换行另写\footnote{写到一页纸的最底部时请尤其注意这一点，该断页时就断页。}，除非算式非常短\footnote{“非常短”的意思是，至少有九成把握可以在一行内写完。}。
+
+\item 较高的括号\,或\,跨行的定界符\,要提前预判，或最后再画。
+
+\item 表示“证毕”的方块放在证明末行，右对齐\footnote{尽管这个符号有一些排版价值，但手写这个主要是为其自我鼓励作用。}。
+
+\item 两节之间设分割实线。跨页时省略此线。
+
+
+
+
+
+\part{Figure}
+\item 作图用尺和铅笔，迷你图\footnote{在A4纸上，这是指面积小于$9\,\mathrm{cm}^{2}$的图。其他情况下可以自行判断。}除外。
+
+\item 向量减法的作图顺序\footnote{或称“向量减法的机械作图法”（相对于“动脑作图法”）。使用这种方法可以避免使用“减指被减”这条需要判断的规则，而只需按步骤操作即可，正确高效。}。如：作$\vec{a} - \vec{b}$
+    \begin{enumerate}[label=(\roman*)]
+        \item Draw $\vec{a}$
+        \item Draw $\vec{b}\,$ from the same start as $\,\vec{a}$
+        \item Connect the end of $\,\vec{b}\,$ to the end of $\,\vec{a}\,$ and add an arrow at the end\footnote{中文表述：从（刚刚画完的）$\vec{b}\,$的终点处连到$\,\vec{a}\,$的终点，并在抬笔的地方画一个箭头。}.
+    \end{enumerate}
+
+\item 物理中，用从圆心出发的箭头标示半径长度\footnote{这是为了避免与实际存在的细线、细杆等物体混淆。}。
+
+\item 占页面宽度超过1/2的图，不与文字混排。
+
+\item 当一道题中涉及多张图时，要标明图的序号。
+
+
+
+
+\part{Miscellany}
+\item 作差应使用和结论相同的结构，即，比较$a$和$b$的大小时，应比较$a-b$与$0$的大小，而不是$b-a$.
+
+\item Underline every occurrence of the symbol $\,O$, to distinguish them from 0 (zero). Also, underline the letter $\,a\,$ when it appears as a symbol in the running text, to distinguish it from the indefinite article.
+
+\item Text preceding displayed equations are not followed by any special punctuation, especially colons.
+
+\item Commas and periods should be placed inside quotation marks, but other punctuation, like colons and question marks, stay outside the quotation marks unless they are part of the quotation.
+
+\item Numbers smaller than ten should be spelled out when used as adjectives and numbers, but not when used as numerals.
+    \begin{quote}
+    Bad: The method requires 2 passes.\\
+    Good: The method requires two passes.\\
+    Bad: The number of solutions is either 2 or 3.\\
+    Good: The number of solutions is either two or three.\\
+    Bad: The leftmost ``two'' in the sequence was changed to a ``one''.\\
+    Good: The leftmost 2 in the sequence was changed to a 1.
+    \end{quote}
+
+\item Don't name the elements of a set unless necessary. Then you can refer to elements $x$ and $y$ in your subsequent discussion, without needing subscripts; or you can refer to $x_{1}$ and $x_{2}$ as specified elements. Violation of this rule calls for trouble. Starting out with a definition like ``Let $X = \{x_{1},\dots ,x_{n}\}$'', you'll need to be speaking of elements $x_{i}$ and $x_{j}$ all the time. Moreover, if you're going to need subsets of $X$, the subset will have to defined as, say, $\{x_{{i}_{1}},\dots ,x_{{i}_{n}}\}$. This involves subscripted subscripts therefore should be avoided.
+
+\item 较长的论述中，可用斜体或下划线来强调文字\footnote{注意，是强调“文字”，不是“字符”。一般地，字符在手写中不能被强调。}。
+
+\item \label{color}对于草稿中的草稿，如：大量计算，尝试性反推，列举可用公式等\footnote{不包括用文字表达的思路，见第\ref{text}条。}，使用{\fontsize{11.5pt}{1}\color{blue}\emph{不同颜色}}\footnote{通常正文用黑色\,0.7mm\, 水笔，“不同颜色”用蓝色\,0.7mm\,圆珠笔。}，避免混乱。
+
+\item 不要的部分在左右各画一个细长的叉来表示，不可直接划掉原来的内容。如果不要的部分超过了纸面的1/4, 那么在不要的部分的四个角上各画一个小叉，并在其顶部和底部各用尺画一条虚线。需要恢复时，在叉中间画圈即可。
+
+\item 进行复杂运算时，说明每一步进行的操作\footnote{这对\ debug\ 和\,使用计算技巧\,都很有用。}。
+
+\item 当字母有取值范围时，必须给出\emph{完整}的范围，尤其是在次级分类讨论中。
+
+\item 不属于解答过程的元素放在虚线方框内。如：解法的注释、相关内容的标注、对题目类型的评论\footnote{注意本条与第
+    \ref{color}条的区别。}。
+
+\item 卡住时，表述卡住的原因，越详细越好\footnote{So often, the only trouble one has is what the trouble is. 同学来问我题目的时候，往往，我只用一句话就可以解决：“你的问题是什么？”}。
+
+\item \label{text}越难的题，越要将思路表示清楚，要好像“一个月都解不出这道题”一样详细，就像写代码必须要有注释一样\footnote{线性的解题过程是整理得到的，实际的解题过程一般是发散的。对一道复杂的题目，我会同时考虑四个方面：“马上能得到的”，“依赖于第一步结果的”，“不可能发生的”和“从结论可反推的”。这些都是有用的线索，必须写下来。}。
+
+\item 做错的题，如果看过解答仍无法解决，要做记号并整理到清单上。
+\end{enumerate}
+
+\end{document}
